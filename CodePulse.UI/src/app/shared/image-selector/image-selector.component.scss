@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.image {
+  width: 125px;
+  height: auto;
+  object-fit: fill;
+  aspect-ratio: 1280 / 720;
+}

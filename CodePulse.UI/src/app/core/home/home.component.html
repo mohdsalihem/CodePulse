@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="my-5">
+    <div class="row align-items-strech">
+      @if (blogs$ | async; as blogs) { @for (blog of blogs; track $index) {
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card h-100">
+          <img
+            [src]="blog.featuredImageUrl"
+            [alt]="blog.title"
+            class="card-img-top"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ blog.title }}</h5>
+            <p class="card-text">{{ blog.shortDescription }}</p>
+            <span class="d-flex align-items-end">
+              <a
+                [routerLink]="['/blog', blog.urlHandle]"
+                class="btn btn-primary"
+                >Read More</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+      } }
+    </div>
+  </div>
+</div>
